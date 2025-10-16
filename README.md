@@ -183,8 +183,8 @@ public class NotificationFactory : INotificationFactory
 ### Registering Keyed Services
 
 ```csharp
-builder.Services.AddKeyedTransient<INotificationService>("email", sp => new EmailNotificationService());
-builder.Services.AddKeyedTransient<INotificationService>("sms", sp => new SmsNotificationService());
+builder.Services.AddKeyedTransient<INotificationService, EmailNotificationService>("email");
+builder.Services.AddKeyedTransient<INotificationService, SMSNotificationService>("sms");
 builder.Services.AddSingleton<INotificationFactory, NotificationFactory>();
 ```
 
