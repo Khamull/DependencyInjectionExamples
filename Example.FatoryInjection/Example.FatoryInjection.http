@@ -1,0 +1,10 @@
+@Host = http://localhost:5089
+
+### Email
+POST {{Host}}/notify?name=Charles&type=email
+Accept: application/json
+
+### SMS
+POST {{Host}}/notify?name=Charles&type=sms
+Accept: application/json
+###

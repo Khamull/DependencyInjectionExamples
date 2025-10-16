@@ -1,0 +1,7 @@
+@Example.DICoreWithoutMiddleware_HostAddress = http://localhost:5217
+
+### Send notification
+POST {{Example.DICoreWithoutMiddleware_HostAddress}}/notify
+Content-Type: application/json
+Accept: application/json
+"Test"
